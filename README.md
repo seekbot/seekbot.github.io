@@ -1,2 +1,2 @@
 # MyWebsite
-Building my own website using HTML.
+Building my own website while learning HTML and CSS.
