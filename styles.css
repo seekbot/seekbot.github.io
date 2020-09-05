@@ -1,13 +1,13 @@
 *{
     box-sizing: border-box;
-    color: #ffffff
+    color: #000000
 }
 
 html,body{
     margin:0;
     padding:0;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    background-color:turquoise;
+    background-color:white;
 }
 
 .nav ul{
@@ -25,14 +25,14 @@ html,body{
 }
 
 .nav a:hover{
-    background-color:rgba(255,255,255,.3);
+    background-color:rgba(148, 144, 144, 0.5);
 } 
 
 .main-nav{
     text-align:center;
     font-size:1.1em;
     font-weight:lighter;
-    border-bottom: 1px solid rgba(255,255,255,.3);
+    border-bottom: 1.25px solid rgba(0,0,0,.5);
 }
 
 .main-nav li{
@@ -40,8 +40,7 @@ html,body{
 }
 
 .main-header{
-    background-color: rgba(0,0,0,.6);
-    background-image: url("Images/Mountain2.jpg");
+    background-color: #73BFB8;
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -52,4 +51,5 @@ html,body{
     text-align:center;
     margin: 0;
     font-size: 4em;
+    font-weight: normal;
 }
