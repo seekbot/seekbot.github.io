@@ -20,35 +20,40 @@
         </header>
         
         <section>
-            <div>
-                <div>
-                    <span>First Name:</span>
-                    <input type = "text">
-                    <span>Last Name:</span>
-                    <input type = "text">
-                    <div>Subject:</div>
-                    <input type = "text">
-                    <div>Description:</div>
-                    <input type = "text">
-                    <div>
-                        <button type = "button">Submit</button>
-                    </div>
-                </div>
-            </div>
+            <div class ="contact">
+                <h2>Contact me</h2>
+                <form action ="action_page.php">
+              
+                  <label for = "fname">First Name</label>
+                  <input type = "text" id = "fname" name = "firstname">
+                  
+                  <label for = "lname">Last Name</label>
+                  <input type = "text" id = "lname" name = "lastname">
+
+                  <label for = "email">Email Address</label>
+                  <input type = "text" id = "email" name = "email">
+
+                  <label for = "desc">Description</label>
+                  <textarea id = "desc" name = "desc" style="height:200px"></textarea>
+              
+                  <input type = "submit" value = "Submit">
+              
+                </form>
+              </div> 
         </section>
        
-        <footer>
-            <p>
-            </p>
-            <ul>
+        <footer class = "main-footer">
+            <div class = "main-footer-container">
+            <h3>Other media</h3>
+            <ul class = "nav footer-nav">
                 <li>
                     <a href = "https://www.linkedin.com/in/ji-jeong/" target = "_blank"> 
-                        <img src = "Images/LinkedIn.png" alt = "LinkedIn" width = "60"> 
+                        <img src = "Images/LinkedIn.png" alt = "LinkedIn" > 
                     </a>
                 </li>                
                 <li>
                     <a href = "https://github.com/seekbot/" target = "_blank">
-                        <img src = "Images/GitHub.png" alt = "GitHub" width = "100">
+                        <img src = "Images/GitHub.png" alt = "GitHub">
                     </a>
                 </li>
             </ul>
