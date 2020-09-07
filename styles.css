@@ -7,6 +7,11 @@ html,body{
     margin:0;
     padding:0;
     font-family: Georgia, 'Times New Roman', Times, serif;
+    background-image: url(Images/Mountain1.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-attachment: fixed;
+
 }
 
 .nav ul{
@@ -39,7 +44,8 @@ html,body{
 }
 
 .main-header{
-    background-color: #73BFB8;
+    background-image: url(Images/Mountain3-Cropped.jpg);
+    background-color: #9beee0;
     background-blend-mode: multiply;
     background-size: cover;
     padding-bottom: 30px;
@@ -53,10 +59,6 @@ html,body{
     font-weight: normal;
 }
 
-.web-name-large{
-    font-size: 8em;
-}
-
 .content-section{
     margin:1em;
 }
@@ -64,20 +66,12 @@ html,body{
 .container{
     max-width:900px;
     margin: 0 auto;
-    padding:0 1.5em;
+    padding:1em 1.5em;
 }
 
 .section-header{
     text-align: center;
     font-size: 2.5em;
-}
-
-.home-image{
-    display:block;
-    height: 500px;
-    width:1000px;
-    margin-left: auto;
-    margin-right: auto;
 }
 
 .main-footer{
@@ -113,6 +107,15 @@ html,body{
 
 }
 
+.dir-footer{
+    background-color: #73BFB8;
+    padding:.5em 0;
+}
+
+.dir-footer-container{
+    display:flex;
+}
+
 .btn{
     text-align:center;
     vertical-align:middle;
@@ -121,7 +124,7 @@ html,body{
 
 }
 
-.btn-contact{
+.btn-footer{
     margin:.5em 15% 2em 15%;
     border:2.5px solid black;
     border-radius:0;
@@ -130,7 +133,7 @@ html,body{
     padding: .5em 1em .5em 1em;
 }
 
-.btn-contact:hover{
+.btn-footer:hover{
     background-color:rgba(0,0,0,.5);
 }
 
@@ -152,10 +155,10 @@ input[type = text], select, textarea {
     width: 100%;
     padding: 12px; 
     border: 1px solid #ccc; 
-    box-sizing: border-box; /* Make sure that padding and width stays in place */
+    box-sizing: border-box; 
     margin-top: 6px;
     margin-bottom: 16px; 
-    resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
+    resize: vertical; 
   }
 
   input[type =submit] {
