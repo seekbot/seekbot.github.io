@@ -1,6 +1,6 @@
 *{
     box-sizing: border-box;
-    color: #000000
+    color: black;
 }
 
 html,body{
@@ -104,6 +104,44 @@ html,body{
     height:30px;
 }
 
+.about-pic{
+    float:left;
+    height:400px;
+    width:300px;
+    margin:15px;
+    border-radius:50%;
+
+}
+
+.btn{
+    text-align:center;
+    vertical-align:middle;
+    padding:.67em;
+    cursor: pointer;
+
+}
+
+.btn-contact{
+    margin:.5em 15% 2em 15%;
+    border:2.5px solid black;
+    border-radius:0;
+    font-size:1.5em;
+    font-weight: lighter;
+    padding: .5em 1em .5em 1em;
+}
+
+.btn-contact:hover{
+    background-color:rgba(0,0,0,.5);
+}
+
+a:link{
+    text-decoration: none;
+}
+
+a:hover{
+    color:white;
+}
+
 .contact{
     border-radius: 5px;
     background-color: #f2f2f2;
@@ -111,13 +149,12 @@ html,body{
 }
 
 input[type = text], select, textarea {
-    width: 100%; /* Full width */
-    padding: 12px; /* Some padding */ 
-    border: 1px solid #ccc; /* Gray border */
-    border-radius: 4px; /* Rounded borders */
+    width: 100%;
+    padding: 12px; 
+    border: 1px solid #ccc; 
     box-sizing: border-box; /* Make sure that padding and width stays in place */
-    margin-top: 6px; /* Add a top margin */
-    margin-bottom: 16px; /* Bottom margin */
+    margin-top: 6px;
+    margin-bottom: 16px; 
     resize: vertical /* Allow the user to vertically resize the textarea (not horizontally) */
   }
 
