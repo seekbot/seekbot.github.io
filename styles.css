@@ -4,6 +4,7 @@
 }
 
 html,body{
+    background-color: rgba(243, 235, 235, 0.883);
     margin:0;
     padding:0;
     font-family: Georgia, 'Times New Roman', Times, serif;
@@ -76,11 +77,10 @@ img{
 .section-header{
     text-align: center;
     font-size: 2.5em;
-    
 }
 
 .home-pic{
-    width:1900px;
+    width:1500px;
     height:1000px;
 }
 
