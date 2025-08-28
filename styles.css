@@ -37,13 +37,19 @@ a {
 }
 
 /* NAVBAR */
-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+.site-nav { 
+  display: flex; 
+  justify-content: space-between; 
+  align-items: center; 
+  padding: 0 20px; 
+  height: 80px; 
+  position: relative; 
+}
 
-  padding: 0 50px;
-  height: 80px;
+.site-nav .left a { 
+  font-size: 22px; 
+  font-weight: 600; 
+  color: var(--text-color); 
 }
 
 nav .left a {
@@ -72,6 +78,35 @@ nav .right a:hover::after {
 
 nav .right a span {
   margin-left: 5px;
+}
+
+/* Default: hide hamburger */
+.hamburger {
+  display: none;
+  width: 44px;
+  height: 44px;
+  border: 0;
+  background: transparent;
+  cursor: pointer;
+  padding: 8px;
+  box-sizing: content-box;
+}
+
+/* three bars */
+.hamburger .bar {
+  display: block;
+  width: 26px;
+  height: 2px;
+  margin: 5px 0;
+  background: var(--text-color);
+  transition: transform 0.25s ease, opacity 0.2s ease;
+}
+
+/* right (menu) - default desktop style */
+.site-nav .right {
+  display: flex;
+  gap: 10px;
+  align-items: center;
 }
 
 /* HERO (Home)*/
@@ -480,6 +515,58 @@ footer {
   }
 }
 
+/* MOBILE - show hamburger, hide inline nav until toggled */
+@media (max-width: 768px) {
+  .hamburger {
+    display: block; /* show hamburger on small screens */
+  }
+
+  .site-nav .right {
+    position: absolute;
+    top: 80px;
+    right: 0;
+    left: 0;               /* full width dropdown - change as you like */
+    margin: 0 20px;
+    flex-direction: column;
+    background: white;
+    border-radius: 8px;
+    padding: 10px;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.12);
+    transform-origin: top;
+    transform: translateY(-6px) scaleY(0.98);
+    opacity: 0;
+    pointer-events: none;
+    z-index: 1200;
+    transition: transform 0.22s ease, opacity 0.22s ease;
+  }
+
+  nav .right.active {
+    transform: translateY(0) scaleY(1);
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+  .site-nav .right a {
+    padding: 12px 10px;
+    margin: 4px 0;
+    text-align: left;
+    display: block;
+    color: var(--text-color);
+  }
+}
+
+/* hamburger -> X animation when .open added */
+.hamburger.open .bar:nth-child(1) { 
+  transform: translateY(7px) rotate(45deg); 
+}
+.hamburger.open .bar:nth-child(2) { 
+  opacity: 0; 
+  transform: scaleX(0.2); 
+}
+.hamburger.open .bar:nth-child(3) { 
+  transform: translateY(-7px) rotate(-45deg); 
+}
+
 @media (max-width: 740px) {
   /* SECTION 1: intro */
   .intro-section {
@@ -513,16 +600,6 @@ footer {
 
   nav .right a {
     font-size: 22px;
-  }
-
-  nav .right a:last-child {
-    color: var(--text-color);
-    background-color: transparent;
-    padding: 0;
-  }
-
-  nav .right a span {
-    display: none;
   }
 
   /* SECTION 1: intro */

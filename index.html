@@ -11,28 +11,23 @@
 <title>Ji Jeong</title>
 <body>
     <!--NAVBAR-->
-    <nav>
-    <div class="left">
-        <a href="index.html">Ji Jeong</a>
-    </div>
+    <nav class="site-nav" role="navigation">
+        <div class="left">
+            <a href="index.html">Ji Jeong</a>
+        </div>
 
-    <div class="right">
-        <a href="#skills" target="_blank" rel="noopener noreferrer">
-        <span>Skills</span>
-        </a>
-        
-        <a href="#education" target="_blank" rel="noopener noreferrer">
-        <span>Education</span>
-        </a>
-        
-        <a href="#experience">
-        <span>Experience</span>
-        </a>
+        <button class="hamburger" aria-label="Toggle menu" aria-controls="nav-menu" aria-expanded="false">
+            <span class="bar"></span>
+            <span class="bar"></span>
+            <span class="bar"></span>
+        </button>
 
-        <a href="publications.html">
-        <span>Publications</span>
-        </a>
-    </div>
+        <div class="right" id="nav-menu">
+            <a href="#skills">Skills</a>
+            <a href="#education">Education</a>
+            <a href="#experience">Experience</a>
+            <a href="publications.html">Publications</a>
+        </div>
     </nav>
 
     <main>
@@ -255,7 +250,7 @@
                     <div class="text">
                         <div class="header">
                             <h3>Defence Research and Development Canada</h3>
-                            <h5>Alberta, Canada</h5>
+                            <h5>Suffield, Canada</h5>
                         </div>
                         <div class="sub-header">
                             <h4>Robotics Research Engineer Co-op</h4>
@@ -279,7 +274,7 @@
                     <div class="text">
                         <div class="header">
                             <h3>SFU Fuel Cell Research Lab (FCReL)</h3>
-                            <h5>British Columbia, Canada</h5>
+                            <h5>Vancouver, Canada</h5>
                         </div>
                         <div class="sub-header">
                             <h4>Research Assistant Co-op</h4>
@@ -301,5 +296,41 @@
     <footer>
         <p>© 2025 Ji Jeong. All rights reserved.</p>
     </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+        const btn = document.querySelector('.hamburger');
+        const nav = document.getElementById('nav-menu');
+
+        if (!btn || !nav) {
+            console.warn('Hamburger button or nav menu not found');
+            return;
+        }
+
+        btn.addEventListener('click', function (e) {
+            const isOpen = btn.classList.toggle('open');
+            nav.classList.toggle('active');
+            btn.setAttribute('aria-expanded', isOpen);
+        });
+
+        // Close when clicking outside
+        document.addEventListener('click', function (e) {
+            if (!nav.contains(e.target) && !btn.contains(e.target) && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            btn.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+
+        // Close if user resizes above breakpoint
+        window.addEventListener('resize', function () {
+            if (window.innerWidth > 768 && nav.classList.contains('active')) {
+            nav.classList.remove('active');
+            btn.classList.remove('open');
+            btn.setAttribute('aria-expanded', 'false');
+            }
+        });
+        });
+    </script>
 </body>
 </html>
