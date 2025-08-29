@@ -184,7 +184,7 @@ nav .right a span {
   font-weight: lighter;
 }
 
-/* SECTION 1: intro */
+/* SECTION: intro */
 .intro-section {
   display: flex;
   justify-content: space-between;
@@ -234,7 +234,7 @@ nav .right a span {
   border-radius: 50%;
 }
 
-/* SECTION 2: Skills */
+/* SECTION: Skills */
 .skills-section {
   padding: 0 50px;
   margin-bottom: 100px;
@@ -317,7 +317,7 @@ nav .right a span {
   object-fit: contain;
 }
 
-/* SECTION 3: education */
+/* SECTION: education */
 .education-section {
   padding: 0 5%;
   margin-bottom: 100px;
@@ -353,7 +353,8 @@ nav .right a span {
 
 .education-section .details img {
   width: 150px;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
+  height: auto;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -380,6 +381,7 @@ nav .right a span {
 
 .education-section .text {
   flex: 8;
+  margin-bottom: 10px;
 }
 
 .education-section .text ul {
@@ -403,7 +405,7 @@ nav .right a span {
     text-decoration: underline; /* show underline on hover/focus for accessibility */
 }
 
-/* SECTION 4: Experience */
+/* SECTION: Experience */
 .xp-section {
   padding: 0 5%;
   margin-bottom: 100px;
@@ -418,6 +420,12 @@ nav .right a span {
   text-align: center;
   font-size: 35px;
   margin-bottom: 40px;
+}
+
+.xp-section h4 {
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 15px;
 }
 
 .xp-section .entry {
@@ -439,7 +447,8 @@ nav .right a span {
 
 .xp-section .details img {
   width: 150px;
-  aspect-ratio: 1 / 1;
+  /* aspect-ratio: 1 / 1; */
+  height: auto;
   object-fit: cover;
   margin-bottom: 10px;
 }
@@ -447,7 +456,7 @@ nav .right a span {
 .xp-section .header {
     display: flex;
     justify-content: space-between; 
-    align-items: baseline;          
+    align-items: flex-start;          
     margin-bottom: 10px;
     gap: 20px;
 }
@@ -455,13 +464,15 @@ nav .right a span {
 .xp-section .header h3 {
     margin: 0;
     font-size: 1.2em;
+    flex: 1;
 }
 
 .xp-section .header h5 {
     margin: 0;
     font-size: 1.2em;        
     font-weight: 400;        
-    color: #555;             
+    color: #555; 
+    white-space: nowrap;            
 }
 
 .xp-section .sub-header {
@@ -494,6 +505,136 @@ nav .right a span {
 
 .xp-section .text li {
     margin-bottom: 5px; 
+}
+
+.xp-section .header a {
+    color: inherit;          
+    text-decoration: none;   
+    font-weight: 500;        
+}
+
+.xp-section .header a:hover,
+.xp-section .header a:focus {
+    color: #0056b3;          /* accessible contrast color on hover/focus */
+    text-decoration: underline; /* show underline on hover/focus for accessibility */
+}
+
+/* SECTION: awards */
+.awards-section {
+  padding: 0 5%;
+  margin-bottom: 100px;
+}
+
+.awards-section img {
+  max-width: 100%;
+  height: auto;
+}
+
+.awards-section h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.awards-section h4 {
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.awards-section .entry {
+    display: flex;
+    align-items: flex-start; 
+    gap: 15px;
+    margin-bottom: 30px;
+    padding: 20px;
+    background-color: #fff; 
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+}
+
+.awards-section .details {
+  text-align: center;
+  flex: 2;
+}
+
+.awards-section .details img {
+  width: 150px;
+  /* aspect-ratio: 1 / 1; */
+  height: auto;
+  object-fit: cover;
+  margin-bottom: 10px;
+}
+
+.awards-section .header {
+    display: flex;
+    justify-content: space-between; 
+    align-items: baseline;          
+    margin-bottom: 10px;
+    gap: 20px;
+}
+
+.awards-section .header h3 {
+    margin: 0;
+    font-size: 1.2em;
+}
+
+.awards-section .header h5 {
+    margin: 0;
+    font-size: 1.2em;        
+    font-weight: 400;        
+    color: #555;             
+}
+
+.awards-section .sub-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+}
+
+.awards-section .sub-header h4 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  text-align: left;
+}
+
+.awards-section .sub-header h6 {
+  margin: 0;
+  font-size: 1rem;
+  font-weight: 400;
+  color: #555;
+  margin-left: auto;    
+  text-align: right;  
+  max-width: 300px;     
+  /* line-height: 1.4; */
+  /* word-wrap: break-word;  */
+}
+
+.awards-section .text {
+  flex: 8;
+}
+
+.awards-section .text ul {
+    margin-left: 20px; 
+    padding-left: 20px; 
+}
+
+.awards-section .text li {
+    margin-bottom: 5px; 
+}
+
+.awards-section .text a {
+    color: inherit;          
+    text-decoration: none;   
+    font-weight: 500;        
+}
+
+.awards-section .text a:hover,
+.awards-section .text a:focus {
+    color: #0056b3;          /* accessible contrast color on hover/focus */
+    text-decoration: underline; /* show underline on hover/focus for accessibility */
 }
 
 /* FOOTER */
