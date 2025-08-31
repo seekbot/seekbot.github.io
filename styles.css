@@ -637,6 +637,84 @@ nav .right a span {
     text-decoration: underline; /* show underline on hover/focus for accessibility */
 }
 
+/* Research */
+.research-section {
+  padding: 0 5%;
+  margin-bottom: 100px;
+}
+
+.research-section .other-sites {
+  flex: 8;
+  text-align: left;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.research-section h2 {
+  text-align: center;
+  font-size: 35px;
+  margin-bottom: 30px;
+}
+
+.research-section h4 {
+  text-align: left;
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+
+.research-section .text {
+  background: #f9f9f9;
+  border-left: 4px solid #0056b3;
+  padding: 15px;
+}
+
+.research-section .entry {
+  display: block; /* or flex only if you want side-by-side columns */
+  padding: 20px;
+  background-color: #fff; 
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.5);
+  margin-bottom: 30px;
+}
+
+.research-section .entry h2 {
+  margin-bottom: 10px;
+  font-size: 1.2em;
+  text-align: left;
+}
+
+.research-section .entry ul {
+  margin-left: 20px; 
+  padding-left: 20px; 
+}
+
+.research-section .entry li {
+  margin-bottom: 8px;
+}
+
+.research-section .thesis-text ul {
+  margin-left: 20px; 
+  padding-left: 20px; 
+}
+
+.research-section .thesis-text li {
+  margin-bottom: 0px;
+}
+
+.research-section .thesis-text a {
+    color: inherit;          
+    text-decoration: none;   
+    font-weight: 500;        
+}
+
+.research-section .thesis-text a:hover,
+.research-section .thesis-text a:focus {
+    color: #0056b3;          /* accessible contrast color on hover/focus */
+    text-decoration: underline; /* show underline on hover/focus for accessibility */
+}
+
+
 /* FOOTER */
 footer {
   border-top: 1px solid #ccc;
